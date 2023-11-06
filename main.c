@@ -59,9 +59,7 @@ typedef struct {
     float valorCadastroResiduos;
 } IndustriaCliente;
 
-
-
-// Cadastrar os dados da Industria
+// cadastrar os dados da Industria
 void cadastrarIndustria(IndustriaCliente *cliente) {
     IndustriaCliente industria;
     
@@ -147,7 +145,7 @@ void cadastrarIndustria(IndustriaCliente *cliente) {
     printf("Os dados da indústria foram cadastrados com sucesso!\n");
 }
 
-// Função para cadastrar os resíduos ambientais tratados e o valor estimado de custo
+// cadastrar os resíduos 
 void cadastrarResiduos(IndustriaCliente *cliente) {
     
 
@@ -168,7 +166,7 @@ void cadastrarResiduos(IndustriaCliente *cliente) {
     scanf("%f", cliente->valorCadastroResiduos);
 }
 
-// Atualizar as quantidades de resíduos tratados
+// atualizar os resíduos tratados
 void atualizarResiduos(IndustriaCliente *cliente) {
     int quantidade;
     float valorEstimado;
@@ -195,6 +193,7 @@ void atualizarResiduos(IndustriaCliente *cliente) {
     printf("Dados atualizados com sucesso!\n");
 }
 
+// criptografar os dados 
 /*
 // Função para criptografar uma string
 void criptografar(char *str) {
@@ -234,7 +233,7 @@ void descriptografar(char *str) {
 }
 */
 
-// Função para gerar relatórios individuais
+// gerar relatórios individuais
 void gerarRelatorioIndividual(IndustriaCliente cliente) {
     printf("\nRelatório Individual:\n");
     printf("Nome do Responsável: %s\n", cliente.nomeResponsavel);
@@ -243,8 +242,7 @@ void gerarRelatorioIndividual(IndustriaCliente cliente) {
     printf("Valor Estimado de Custo: %.2f\n", cliente.valorCusto);
 }
 
-
-// Função para gerar relatórios globais
+// gerar relatórios globais
 void gerarRelatorioGlobal(IndustriaCliente clientes[], int numClientes) {
     printf("\nRelatório Global:\n");
 
@@ -280,6 +278,7 @@ void gerarRelatorioGlobal(IndustriaCliente clientes[], int numClientes) {
     printf("Aporte Financeiro Semestral: %.2f\n", aporteFinanceiroSemestral);
 }
 
+// função principal
 int main() {
     // Realizar o login
     if (!login()) {
