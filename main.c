@@ -149,12 +149,12 @@ void cadastrarIndustria(IndustriaCliente *cliente) {
 void cadastrarResiduos(IndustriaCliente *cliente) {
     
 
-    printf("Digite o nome do usuário: ");
+    printf("Digite o nome do respónsavel: ");
     scanf("%s", cliente->nomeCadastroResiduos);
     // fgets(nome, sizeof(nome), stdin);
     // nome[strcspn(nome, "\n")] = '\0'; 
 
-    printf("Digite o CPF do usuário: ");
+    printf("Digite o CPF do respónsavel: ");
     scanf("%s", cliente->cpfCadastroResiduos);
     // fgets(cpf, sizeof(cpf), stdin);
     // cpf[strcspn(cpf, "\n")] = '\0'; 
@@ -195,7 +195,7 @@ void atualizarResiduos(IndustriaCliente *cliente) {
 
 // criptografar os dados 
 /*
-// Função para criptografar uma string
+// criptografar 
 void criptografar(char *str) {
     int i = 0;
     while (str[i] != '\0') {
@@ -204,7 +204,7 @@ void criptografar(char *str) {
     }
 }
 
-// Função para descriptografar uma string
+// descriptografar
 void descriptografar(char *str) {
     int i = 0;
     while (str[i] != '\0') {
@@ -214,12 +214,11 @@ void descriptografar(char *str) {
 }
 
 
-
-    // Criptografa os dados sensíveis
+    // criptografa os dados sensíveis
     criptografar(nome);
     criptografar(cpf);
 
-    // Salva as informações em um arquivo
+    // salva as informações em um arquivo
     FILE *arquivo = fopen("residuos.txt", "a");
     if (arquivo == NULL) {
         printf("Erro ao abrir o arquivo.\n");
@@ -311,8 +310,8 @@ int main() {
             case 2:
                 // atualizar_residuos();
                 // break;
-                if (numResiduosCadastrados >= 0) {
-                    cadastrarResiduos(&clientes[numResiduosCadastrados]);
+                if (numClientes > 0) {
+                    cadastrarResiduos(&clientes[numResiduosCadastrados - 1]);
                 } else {
                     printf("Nenhuma indústria cadastrada\n");
                 }
